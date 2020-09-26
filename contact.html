@@ -17,14 +17,39 @@
         <div id="data">
             <fieldset>
                 <legend>Your Data</legend>
-                <form method="post">
-                    First Name:<input type="text" label="first name" id="firstname" required="required" />
-                    Last Name:<input type="text" label="lastname" id="lastname" required="required"/>
-                </form>
+                <form method="post" action="mailto:lauren.lizzie.johnson@gmail.com">
+                    First Name*:<input type="text" label="first name" id="firstname" required="required" />
+                    Last Name*:<input type="text" label="lastname" id="lastname" required="required"/>
+                    <br/>
+                    Address*:<input type="text" label="address" id="address" required="required"/><br/>
+                    City*:<input type="text" label="city" id="city" required="required"/>
+                    Province*:<select name="city" id="city">
+                        <option selected="selected" label="Alberta">Alberta</option>
+                        <option label="British Columbia">British Columbia</option>
+                        <option label="Manitoba">Manitoba</option>
+                        <option label="New Brunswick">New Brunswick</option>
+                        <option label="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                        <option label="Northwest Territories">Northwest Territories</option>
+                        <option label="Nova Scotia">Nova Scotia</option>
+                        <option label="Nunavut">Nunavut</option>
+                        <option label="Ontario">Ontario</option>
+                        <option label="Prince Edward Island">Prince Edward Island</option>
+                        <option label="Quebec">Quebec</option>
+                        <option label="Saskatchewan">Saksatchewan</option>
+                        <option label="Yukon">Yukon</option>
+                    </select><br/>
+                    Postal Code*:<input type="text" label="postalcode" id="postalcode" required="required"><br/>
+                    Email Address*:<input type="text" label="email" id="email" required="required" placeholder="example@email.com">
+                    Phone Number*<input type="text" label="phone" id="phone" required="required" placeholder="(xxx)-xxx-xxxx">
             </fieldset>
             <fieldset>
                 <legend>Agreement</legend>
+                <input type="checkbox" name="agreement" required value="true"/>
+                <label for="agreement">Accept Agreement</label>
             </fieldset>
+            <button type="submit" class="submit_form" value="Submit">Submit</button>
+            <button type="reset" value="Clear">Clear</button>
+        </form>
         </div>
     </body>
 </html>

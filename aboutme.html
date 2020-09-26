@@ -4,6 +4,21 @@
     <head>
         <meta charset="UTF-8" />
         <title>About Lauren Johnson</title>
+        <style>
+            table, th, td {
+                border: 0.5px solid black;
+                border-spacing: 0.5px;
+            }
+            #a {
+                background-color: slateblue;
+            }
+            #l{
+                background-color: aquamarine;
+            }
+            #o{
+                background-color: dimgray;
+            }
+        </style>
     </head>
     <body>
         <h1>Lauren Johnson</h1>
@@ -32,6 +47,79 @@
                 <li>Developed a prototype for a Virtual Reality game</li>
             </ul>
         </h3>
+        <h2>Appointments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>8:00 AM</th>
+                    <td rowspan="6" id="a">Appointment</td>
+                    <td rowspan="3" id="a">Appointment</td>
+                    <td rowspan="1"></td>
+                    <td rowspan="3" id="a">Appointment</td>
+                    <td rowspan="3" id="a">Appointment</td>
+                    <td rowspan="1"></td>
+                    <td rowspan="9" id="o">Out of Office</td>
+                </tr>
+                <tr>
+                    <th>9:00 AM</th>
+                    <td rowspan="3" id="a">Appointment</td>
+                    <td rowspan="1"id="a">Appointment</td>
+                </tr>
+                <tr>
+                    <th>10:00 AM</th>
+                    <td rowspan="2"id="a">Appointment</td>
+                </tr>
+                <tr>
+                    <th>11:00 AM</th>
+                    <td id="l">Lunch</td>
+                    <td rowspan="1" id="l">Lunch</td>
+                    <td rowspan="2" id="a">Appointment</td>
+                </tr>
+                <tr>
+                    <th>12:00 PM</th>
+                    <td rowspan="3" id="a">Appointment</td>
+                    <td rowspan="1" id="l">Lunch</td>
+                    <td rowspan="2" id="a">Appointment</td>
+                    <td id="l">Lunch</td>
+                </tr>
+                <tr>
+                    <th>1:00 PM</th>
+                    <td rowspan="3" id="a">Appointment</td>
+                    <td id="l">Lunch</td>
+                    <td rowspan="2" id="a">Appointment</td>
+                </tr>
+                <tr>
+                    <th>2:00 PM</th>
+                    <td rowspan="3" id="o">Out of Office</td>
+                    <td rowspan="3" id="a">Appointment</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>3:00 PM</th>
+                    <td rowspan="1"></td>
+                    <td id="a">Appointment</td>
+                    <td rowspan="2" id="a">Appointment</td>
+                </tr>
+                <tr>
+                    <th>4:00 PM</th>
+                    <td rowspan="1"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody> 
+        </table>
         <small>Copyright 2020</small>
     </body>
 </html>     

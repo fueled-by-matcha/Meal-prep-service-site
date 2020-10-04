@@ -19,37 +19,56 @@
             <fieldset>
                 <legend>Your Data</legend>
                 <form method="post" action="mailto:lauren.lizzie.johnson@gmail.com">
-                    First Name*:<input type="text" label="first name" id="firstname" required="required" placeholder="Enter your first name."/> <br/>
-                    Last Name*:<input type="text" label="lastname" id="lastname" required="required" placeholder="Enter your last name."/>
-                    <br/>
-                    Address*:<input type="text" label="address" id="address" required="required" placeholder="Enter your address."/><br/>
-                    City*:<input type="text" label="city" id="city" required="required" placeholder="Enter your city."/><br/>
-                    Province*:<select name="city" id="city"><br/>
-                        <option selected="selected" label="AB">Alberta</option>
-                        <option label="BC">British Columbia</option>
-                        <option label="MB">Manitoba</option>
-                        <option label="NB">New Brunswick</option>
-                        <option label="NL">Newfoundland and Labrador</option>
-                        <option label="NWT">Northwest Territories</option>
-                        <option label="NS">Nova Scotia</option>
-                        <option label="NT">Nunavut</option>
-                        <option label="ON">Ontario</option>
-                        <option label="PEI">Prince Edward Island</option>
-                        <option label="QC">Quebec</option>
-                        <option label="SK">Saksatchewan</option>
-                        <option label="YT">Yukon</option>
-                    </select><br/>
-                    Postal Code*:<input type="text" label="postalcode" id="postalcode" required="required" placeholder="A1A 1A1"><br/>
-                    Email Address*:<input type="text" label="email" id="email" required="required" placeholder="example@email.com"><br/>
-                    Phone Number*<input type="text" label="phone" id="phone" required="required" placeholder="(xxx)-xxx-xxxx">
+                    <table>
+                        <tr>
+                            <td>First Name<span class="required">*</span>:<input type="text" label="first name" id="firstname" required="required" placeholder="Enter your first name."/></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name<span class="required">*</span>:<input type="text" label="lastname" id="lastname" required="required" placeholder="Enter your last name."/></td>
+                        </tr> 
+                        <tr>
+                            <td>Address<span class="required">*</span>:<input type="text" label="address" id="address" required="required" placeholder="Enter your address."/></td>
+                        </tr>
+                        <tr>
+                            <td>City<span class="required">*</span>:<input type="text" label="city" id="city" required="required" placeholder="Enter your city."/></td>
+                        </tr>
+                        <tr>
+                            <td>Province<span class="required">*</span>:
+                                <select name="city" id="city">
+                                    <option selected="selected" label="AB">Alberta</option>
+                                    <option label="BC">British Columbia</option>
+                                    <option label="MB">Manitoba</option>
+                                    <option label="NB">New Brunswick</option>
+                                    <option label="NL">Newfoundland and Labrador</option>
+                                    <option label="NWT">Northwest Territories</option>
+                                    <option label="NS">Nova Scotia</option>
+                                    <option label="NT">Nunavut</option>
+                                    <option label="ON">Ontario</option>
+                                    <option label="PEI">Prince Edward Island</option>
+                                    <option label="QC">Quebec</option>
+                                    <option label="SK">Saksatchewan</option>
+                                    <option label="YT">Yukon</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Postal Code<span class="required">*</span>:<input type="text" label="postalcode" id="postalcode" required="required" placeholder="A1A 1A1"></td>
+                        </tr>
+                        <tr>
+                            <td>Email Address<span class="required">*</span>:<input type="text" label="email" id="email" required="required" placeholder="example@email.com"></td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number<span class="required">*</span>:<input type="text" label="phone" id="phone" required="required" placeholder="(xxx)-xxx-xxxx"></td>
+                        </tr>
+                    </table>
             </fieldset>
             <fieldset>
                 <legend>Agreement</legend>
                 <input type="checkbox" name="agreement" required value="true"/>
                 <label for="agreement">Accept Agreement</label>
+                <button type="submit" class="submit_form" value="Submit">Submit</button>
+                <button type="reset" value="Clear">Clear</button>
             </fieldset>
-            <button type="submit" class="submit_form" value="Submit">Submit</button>
-            <button type="reset" value="Clear">Clear</button>
         </form>
         </div>
     </body>

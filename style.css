@@ -164,7 +164,8 @@ h1{
 }
 
 #input{
-    background-image:url('/css/searchicon.png');
+    background-image: src("search.png");
+    border-image-width: 10px;
     background-position: 10px 12px;
     background-repeat: no-repeat;
     width: 100%;
@@ -173,6 +174,11 @@ h1{
     border: 1px solid #ddd;
     margin-bottom: 12px;
 }
+
+img[title="search"] {
+    margin-top: -47px;
+    margin-left: 1px;  
+    }
 
 #foodUL{
     list-style-type: none;

@@ -37,23 +37,23 @@
         <div id="data">
             <fieldset>
                 <legend>Your Data</legend>
-                <form method="post" action="mailto:lauren.lizzie.johnson@gmail.com">
+                <form method="post" action="mailto:lauren.lizzie.johnson@gmail.com" enctype="text/plain">
                     <table>
                         <tr>
-                            <td>First Name<span class="required">*</span>:<input type="text" label="first name" id="firstname" required="required" placeholder="Enter your first name."/></td>
+                            <td>First Name<span class="required">*</span>:<input type="text" label="first name" id="firstname" required="required" name = "first name" placeholder="Enter your first name."/></td>
                         </tr>
                         <tr>
-                            <td>Last Name<span class="required">*</span>:<input type="text" label="lastname" id="lastname" required="required" placeholder="Enter your last name."/></td>
+                            <td>Last Name<span class="required">*</span>:<input type="text" label="lastname" id="lastname" required="required" name = "last name" placeholder="Enter your last name."/></td>
                         </tr> 
                         <tr>
-                            <td>Address<span class="required">*</span>:<input type="text" label="address" id="address" required="required" placeholder="Enter your address."/></td>
+                            <td>Address<span class="required">*</span>:<input type="text" label="address" id="address" required="required" name = "address" placeholder="Enter your address."/></td>
                         </tr>
                         <tr>
-                            <td>City<span class="required">*</span>:<input type="text" label="city" id="city" required="required" placeholder="Enter your city."/></td>
+                            <td>City<span class="required">*</span>:<input type="text" label="city" id="city" required="required" name = "city" placeholder="Enter your city."/></td>
                         </tr>
                         <tr>
                             <td>Province<span class="required">*</span>:
-                                <select name="city" id="city">
+                                <select name="province" id="city">
                                     <option selected="selected" label="AB">Alberta</option>
                                     <option label="BC">British Columbia</option>
                                     <option label="MB">Manitoba</option>
@@ -71,13 +71,13 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Postal Code<span class="required">*</span>:<input type="text" label="postalcode" id="postalcode" required="required" placeholder="A1A 1A1"></td>
+                            <td>Postal Code<span class="required">*</span>:<input type="text" label="postalcode" id="postalcode" required="required" name = "postal code" placeholder="A1A 1A1"></td>
                         </tr>
                         <tr>
-                            <td>Email Address<span class="required">*</span>:<input type="text" label="email" id="email" required="required" placeholder="example@email.com"></td>
+                            <td>Email Address<span class="required">*</span>:<input type="text" label="email" id="email" required="required" name = "email" placeholder="example@email.com"></td>
                         </tr>
                         <tr>
-                            <td>Phone Number<span class="required">*</span>:<input type="text" label="phone" id="phone" required="required" placeholder="(xxx)-xxx-xxxx"></td>
+                            <td>Phone Number<span class="required">*</span>:<input type="text" label="phone" id="phone" required="required" name = "phone number" placeholder="(xxx)-xxx-xxxx"></td>
                         </tr>
                     </table>
             </fieldset>

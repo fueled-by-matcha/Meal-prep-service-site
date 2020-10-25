@@ -178,12 +178,13 @@ h1{
 img[title="search"] {
     margin-top: -47px;
     margin-left: 1px;  
-    }
+}
 
 #foodUL{
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: none;
 }
 
 #foodUL li a{

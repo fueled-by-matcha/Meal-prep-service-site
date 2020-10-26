@@ -6,7 +6,7 @@
         <title>Home</title>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+    <body onload = "welcome();">
         <div class="navbar">
             <button class="dropbtn"><a href="index.html">Home</a></button>
             <div class = "dropdown">
@@ -26,7 +26,7 @@
             <button class="dropbtn"><a href="aboutme.html">About</a></button>
         </div>
         <p id ="welcome">
-            document.getElementById("welcome").innerHTML = "welcome()";
+            <script>welcome();</script>
         </p> 
         <p title = "about">
             This is a website dedicated to meal prepping for busy people!
@@ -112,6 +112,22 @@
                             li[i].style.display = "none";
                         }
                     }
+                }
+            }
+            function welcome(){
+                const DATE = new Date();
+                const HOUR = DATE.getHours();
+                if(HOUR < 6 && HOUR > 0){
+                    document.getElementById("welcome").innerHTML = "Good morning, you must be an early bird!";
+                }
+                else if(HOUR < 12 && HOUR >= 6){
+                    document.getElementById("welcome").innerHTML = "Good Morning";
+                }
+                else if (HOUR >= 12 && HOUR < 18){
+                    document.getElementById("welcome").innerHTML = "Good Afternoon";
+                }
+                else{
+                    document.getElementById("welcome").innerHTML = "Good Evening";
                 }
             }
         </script>

@@ -201,3 +201,9 @@ img[title="search"] {
 #foodUL li a:hover:not(.header){
     background-color: #6495ED;
 }
+
+#welcome {
+    color: red;
+    font-weight: bold;
+    text-align: right;
+}

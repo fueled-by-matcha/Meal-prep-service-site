@@ -1,28 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<html>
+<html lang = "en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>About Lauren Johnson</title>
+        <title>Home</title>
         <link rel="stylesheet" href="style.css" />
-        <style>
-            table, th, td {
-                border: 0.5px solid black;
-                border-spacing: 0.5px;
-            }
-            #a {
-                background-color: slateblue;
-            }
-            #l{
-                background-color: aquamarine;
-            }
-            #o{
-                background-color: dimgray;
-            }
-        </style>
     </head>
-    <body>
+    <body onload = "welcome();">
         <div class="navbar">
             <button class="dropbtn"><a href="index.html">Home</a></button>
             <div class = "dropdown">
@@ -41,109 +25,111 @@
             </div>
             <button class="dropbtn"><a href="aboutme.html">About</a></button>
         </div>
-        <h1>Lauren Johnson</h1>
-        <image src="20200802_112441.jpg" width="300" height="300" alt="Pickles the cat"/>
-        <h2>A brief description of who I am</h2>
-        <p title="about">
-            I'm Lauren and I'm a student in the <strong>Computer Programming</strong>
-            program at Algonquin College!  My cat's name is <strong>Pickles</strong>! I like
-            to <strong>cook, watch horror movies, and play video games</strong> in my free time.
-        </p>
-        <div class="qualifications">
-            <h2>Qualifications</h2>
-            <h3>
-                <ol>
-                    <li>Advanced diploma in <em>Biotechnology</em></li>
-                    <li>Diploma in <em>Computer Programming</em> <em>(in progress)</em></li>
-                    <li><em>Web development</em> experience</li>
-                    <li><em>Application development</em> experience</li>
-                    <li><em>User interface design</em> experience</li>
-                </ol>
-            </h3>
-        </div>
-        <div class="accomplishments">
-            <h2>Accomplishments</h2>
-            <h3>
-                <ul>
-                    <li>Created an application that manages walk-in clinic services</li>
-                    <li>Managed an Instagram that focuses on meal prep</li>
-                    <li>Developed a prototype for a Virtual Reality game</li>
-                </ul>
-            </h3>
-        </div>
-        <h2>Appointments</h2>
-        <table class="center">
-            <thead>
-                <tr>
-                    <td></td>
-                    <th>Sunday</th>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th>Saturday</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>8:00 AM</th>
-                    <td rowspan="6" id="a">Appointment</td>
-                    <td rowspan="3" id="a">Appointment</td>
-                    <td rowspan="1"></td>
-                    <td rowspan="3" id="a">Appointment</td>
-                    <td rowspan="3" id="a">Appointment</td>
-                    <td rowspan="1"></td>
-                    <td rowspan="9" id="o">Out of Office</td>
-                </tr>
-                <tr>
-                    <th>9:00 AM</th>
-                    <td rowspan="3" id="a">Appointment</td>
-                    <td rowspan="1"id="a">Appointment</td>
-                </tr>
-                <tr>
-                    <th>10:00 AM</th>
-                    <td rowspan="2"id="a">Appointment</td>
-                </tr>
-                <tr>
-                    <th>11:00 AM</th>
-                    <td id="l">Lunch</td>
-                    <td rowspan="1" id="l">Lunch</td>
-                    <td rowspan="2" id="a">Appointment</td>
-                </tr>
-                <tr>
-                    <th>12:00 PM</th>
-                    <td rowspan="3" id="a">Appointment</td>
-                    <td rowspan="1" id="l">Lunch</td>
-                    <td rowspan="2" id="a">Appointment</td>
-                    <td id="l">Lunch</td>
-                </tr>
-                <tr>
-                    <th>1:00 PM</th>
-                    <td rowspan="3" id="a">Appointment</td>
-                    <td id="l">Lunch</td>
-                    <td rowspan="2" id="a">Appointment</td>
-                </tr>
-                <tr>
-                    <th>2:00 PM</th>
-                    <td rowspan="3" id="o">Out of Office</td>
-                    <td rowspan="3" id="a">Appointment</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>3:00 PM</th>
-                    <td rowspan="1"></td>
-                    <td id="a">Appointment</td>
-                    <td rowspan="2" id="a">Appointment</td>
-                </tr>
-                <tr>
-                    <th>4:00 PM</th>
-                    <td rowspan="1"></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody> 
-        </table>
-        <small>Copyright 2020</small>
+        <p id ="welcome">
+            <script>welcome();</script>
+        </p> 
+        <p title = "about">
+            This is a website dedicated to meal prepping for busy people!
+            Feel free to order a meal that can be prepared and sent to you. 
+            All you need to do is heat up the food!
+        </p> 
+        <input type="text" id="input" onkeyup="searchFood()" placeholder="Search for meals" title="Type in a food"><img title ="search" src= "search.png" width = "30" height ="30"/>
+        <ul id="foodUL">
+            <li><a href="#">Honey and Paprika Glazed Chicken</a></li>
+            <li><a href="#">Shrimp Alfredo</a></li>
+            <li><a href="#">Popcorn Tofu Bowl</a></li>
+            <li><a href="#">Souvlaki Pork</a></li>
+            <li><a href="#">Naan Bread Pizza</a></li>
+            <li><a href="#">Prosciutto and Brie Sandwich</a></li>
+            <li><a href="#">Portobello Mushroom Pappardelle</a></li>
+            <li><a href="#">Chorizo Tagine</a></li>
+            <li><a href="#">Chicken and Mushroom Sauce</a></li>
+            <li><a href="#">Western Burger</a></li>
+            <li><a href="#">Vegetable Lo Mein</a></li>
+            <li><a href="#">Ratatouille</a></li>
+            <li><a href="#">Piri Piri Tofu</a></li>
+            <li><a href="#">Orange and Chocolate French Toast</a></li>
+            <li><a href="#">Chicken Francese</a></li>
+            <li><a href="#">Mushroom Pizza</a></li>
+            <li><a href="#">Instant Pho Jar</a></li>
+            <li><a href="#">Greek Chicken Skewers</a></li>
+            <li><a href="#">Tofu and Kimchi Po-Boy</a></li>
+            <li><a href="#">Chicken Caprese</a></li>
+            <li><a href="#">Shrimp Maki Bowl</a></li>
+            <li><a href="#">Vegetarian Shepherd's Pie</a></li>
+            <li><a href="#">Tex-Mex Beef Pasta</a></li>
+            <li><a href="#">Hummus Bowls</a></li>
+            <li><a href="#">Peruvian Chicken</a></li>
+            <li><a href="#">Cashew Tofu Bowls</a></li>
+            <li><a href="#">Pork Meatballs in BBQ Sauce</a></li>
+            <li><a href="#">Greek Oregano Chicken Bowl</a></li>
+            <li><a href="#">Vegetarian Chili</a></li>
+            <li><a href="#">White Chicken Chili</a></li>
+            <li><a href="#">Hearty Beef Chili</a></li>
+            <li><a href="#">Flank Steak with Peppercorn Sauce</a></li>
+            <li><a href="#">Margarita Shrimp</a></li>
+            <li><a href="#">Tomato and Goat Cheese Linguine</a></li>
+            <li><a href="#">Pumpkin Spice French Toast</a></li>
+            <li><a href="#">Butter Chicken</a></li>
+            <li><a href="#">Beef Vindaloo</a></li>
+            <li><a href="#">Buffalo Chicken Bowl</a></li>
+            <li><a href="#">Keto Buffalo Chicken Bowl</a></li>
+            <li><a href="#">Tandoori Chicken Sandwich</a></li>
+            <li><a href="#">Jalapeno Popper Mac 'n' Cheese</a></li>
+            <li><a href="#">Breakfast Burrito</a></li>
+            <li><a href="#">Shrimp Yakisoba</a></li>
+            <li><a href="#">Steak Fajita Bowl</a></li>
+            <li><a href="#">Matcha Avocado Mango Smoothie</a></li>
+            <li><a href="#">Pork Noodle</a></li>
+            <li><a href="#">Avocado and Tuna Roll</a></li>
+            <li><a href="#">Pork Banh Mi Bowl</a></li>
+            <li><a href="#">Egg Roll in a Bowl</a></li>
+            <li><a href="#">Spring Roll in a Bowl</a></li>
+            <li><a href="#">Keto Salmon Salad</a></li>
+            <li><a href="#">Meat Lover's Snack Bowl</a></li>
+        </ul>
+        <script>
+            function searchFood(){
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("input");
+                if(input.value == ''){
+                    document.getElementById("foodUL").style.display="none";
+                    return;
+                }
+                else{
+                    document.getElementById("foodUL").style.display="block";
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("foodUL");
+                    ul.style.display = "block";
+                    li = ul.getElementsByTagName("li");
+                    for (i = 0; i < li.length; i++){
+                        a = li[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if(txtValue.toUpperCase().indexOf(filter) > -1){
+                            li[i].style.display = "";
+                        }
+                        else{
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            function welcome(){
+                const DATE = new Date();
+                const HOUR = DATE.getHours();
+                if(HOUR < 6 && HOUR > 0){
+                    document.getElementById("welcome").innerHTML = "Good morning, you must be an early bird!";
+                }
+                else if(HOUR < 12 && HOUR >= 6){
+                    document.getElementById("welcome").innerHTML = "Good Morning";
+                }
+                else if (HOUR >= 12 && HOUR < 18){
+                    document.getElementById("welcome").innerHTML = "Good Afternoon";
+                }
+                else{
+                    document.getElementById("welcome").innerHTML = "Good Evening";
+                }
+            }
+        </script>
     </body>
-</html>     
+</html>

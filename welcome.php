@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang = "en">
+<!DOCTYPE HTML>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home</title>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body onload = "welcome();">
+    <body>
         <div class="navbar">
             <button class="dropbtn"><a href="index.html">Home</a></button>
             <div class = "dropdown">
@@ -25,112 +25,26 @@
             </div>
             <button class="dropbtn"><a href="aboutme.html">About</a></button>
         </div>
-        <p id ="welcome">
-            <script>welcome();</script>
-        </p> 
-        <p title = "about">
-            This is a website dedicated to meal prepping for busy people!
-            Feel free to order a meal that can be prepared and sent to you. 
-            All you need to do is heat up the food!
-        </p> 
-        <input type="text" id="input" onkeyup="searchFood()" placeholder="Search for meals" title="Type in a food"><img title ="search" src= "search.png" width = "30" height ="30"/>
-        <ul id="foodUL">
-            <li><a href="#">Honey and Paprika Glazed Chicken</a></li>
-            <li><a href="#">Shrimp Alfredo</a></li>
-            <li><a href="#">Popcorn Tofu Bowl</a></li>
-            <li><a href="#">Souvlaki Pork</a></li>
-            <li><a href="#">Naan Bread Pizza</a></li>
-            <li><a href="#">Prosciutto and Brie Sandwich</a></li>
-            <li><a href="#">Portobello Mushroom Pappardelle</a></li>
-            <li><a href="#">Chorizo Tagine</a></li>
-            <li><a href="#">Chicken and Mushroom Sauce</a></li>
-            <li><a href="#">Western Burger</a></li>
-            <li><a href="#">Vegetable Lo Mein</a></li>
-            <li><a href="#">Ratatouille</a></li>
-            <li><a href="#">Piri Piri Tofu</a></li>
-            <li><a href="#">Orange and Chocolate French Toast</a></li>
-            <li><a href="#">Chicken Francese</a></li>
-            <li><a href="#">Mushroom Pizza</a></li>
-            <li><a href="#">Instant Pho Jar</a></li>
-            <li><a href="#">Greek Chicken Skewers</a></li>
-            <li><a href="#">Tofu and Kimchi Po-Boy</a></li>
-            <li><a href="#">Chicken Caprese</a></li>
-            <li><a href="#">Shrimp Maki Bowl</a></li>
-            <li><a href="#">Vegetarian Shepherd's Pie</a></li>
-            <li><a href="#">Tex-Mex Beef Pasta</a></li>
-            <li><a href="#">Hummus Bowls</a></li>
-            <li><a href="#">Peruvian Chicken</a></li>
-            <li><a href="#">Cashew Tofu Bowls</a></li>
-            <li><a href="#">Pork Meatballs in BBQ Sauce</a></li>
-            <li><a href="#">Greek Oregano Chicken Bowl</a></li>
-            <li><a href="#">Vegetarian Chili</a></li>
-            <li><a href="#">White Chicken Chili</a></li>
-            <li><a href="#">Hearty Beef Chili</a></li>
-            <li><a href="#">Flank Steak with Peppercorn Sauce</a></li>
-            <li><a href="#">Margarita Shrimp</a></li>
-            <li><a href="#">Tomato and Goat Cheese Linguine</a></li>
-            <li><a href="#">Pumpkin Spice French Toast</a></li>
-            <li><a href="#">Butter Chicken</a></li>
-            <li><a href="#">Beef Vindaloo</a></li>
-            <li><a href="#">Buffalo Chicken Bowl</a></li>
-            <li><a href="#">Keto Buffalo Chicken Bowl</a></li>
-            <li><a href="#">Tandoori Chicken Sandwich</a></li>
-            <li><a href="#">Jalapeno Popper Mac 'n' Cheese</a></li>
-            <li><a href="#">Breakfast Burrito</a></li>
-            <li><a href="#">Shrimp Yakisoba</a></li>
-            <li><a href="#">Steak Fajita Bowl</a></li>
-            <li><a href="#">Matcha Avocado Mango Smoothie</a></li>
-            <li><a href="#">Pork Noodle</a></li>
-            <li><a href="#">Avocado and Tuna Roll</a></li>
-            <li><a href="#">Pork Banh Mi Bowl</a></li>
-            <li><a href="#">Egg Roll in a Bowl</a></li>
-            <li><a href="#">Spring Roll in a Bowl</a></li>
-            <li><a href="#">Keto Salmon Salad</a></li>
-            <li><a href="#">Meat Lover's Snack Bowl</a></li>
-        </ul>
-        <img title="home" src="Lovepik_com-832338870-Original hand drawn illustration cartoon cute food enjoy food de.png" width = "300px" height = "300px"/>
-        <script>
-            function searchFood(){
-                var input, filter, ul, li, a, i, txtValue;
-                input = document.getElementById("input");
-                if(input.value == ''){
-                    document.getElementById("foodUL").style.display="none";
-                    return;
-                }
-                else{
-                    document.getElementById("foodUL").style.display="block";
-                    filter = input.value.toUpperCase();
-                    ul = document.getElementById("foodUL");
-                    ul.style.display = "block";
-                    li = ul.getElementsByTagName("li");
-                    for (i = 0; i < li.length; i++){
-                        a = li[i].getElementsByTagName("a")[0];
-                        txtValue = a.textContent || a.innerText;
-                        if(txtValue.toUpperCase().indexOf(filter) > -1){
-                            li[i].style.display = "";
-                        }
-                        else{
-                            li[i].style.display = "none";
-                        }
-                    }
-                }
+        <p>
+            Set your first name (firstName) and last name (lastName) in the file URL to create
+            a personalized welcome message.<br>
+            <em>Example: firstName=name&lastName=name</em>
+        </p>
+        <?php 
+            $firstName = $_GET["firstName"] ?? '';
+            $lastName = $_GET["lastName"] ?? '';
+            if($firstName != '' && $lastName == ''){
+                echo "Hello $firstName";
             }
-            function welcome(){
-                const DATE = new Date();
-                const HOUR = DATE.getHours();
-                if(HOUR < 6 && HOUR > 0){
-                    document.getElementById("welcome").innerHTML = "Good morning, you must be an early bird!";
-                }
-                else if(HOUR < 12 && HOUR >= 6){
-                    document.getElementById("welcome").innerHTML = "Good Morning";
-                }
-                else if (HOUR >= 12 && HOUR < 18){
-                    document.getElementById("welcome").innerHTML = "Good Afternoon";
-                }
-                else{
-                    document.getElementById("welcome").innerHTML = "Good Evening";
-                }
+            elseif($firstName != '' && $lastName != ''){
+                echo "Hello $firstName $lastName";
             }
-        </script>
+            elseif($firstName == '' && $lastName != ''){
+                echo "Hello $lastName";
+            }
+            else{
+                echo "Hello there";
+            }
+        ?>
     </body>
 </html>
